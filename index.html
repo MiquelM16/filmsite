@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#slideshow > div:gt(0)").hide();
+
+            setInterval(function() {
+            $('#slideshow > div:first')
+            .fadeOut(1000)
+            .next()
+            .fadeIn(1000)
+            .end()
+            .appendTo('#slideshow');
+            }, 3000);
+        })
+</script>
+    <title>Film Page</title>
+</head>
+<body>
+    <!--Navbar-->
+    <ul>
+        <li><a class="active" href="#home">Home</a></li>
+        <li><a href="#movie-grid">Films</a></li>
+        <li><a href="acteurs.html">Acteurs</a></li>
+    </ul>
+    <div class="bannerDiv" id = "home">
+        <header class="frontpage-caroussel">
+            <!--Slideshow voor de banner te veranderen-->
+            <div id="slideshow" class="slideshow">
+                <div>
+                    <img src="./Images/BannerOpenheimer.png" alt="Banner1">
+                </div>
+                <div>
+                    <img src="./Images/BannerBarbie.png" alt="Banner2">
+                </div>
+                <div>
+                    <img src="./Images/BannerFastX.png" alt="Banner3">
+                </div>
+            </div>
+        </header>
+    </div>
+    <!-- Tekst op de banner-->
+    <div class="bannertext">
+        <h1 style="font-size:50px">Nu in de bioscoop</h1>
+    </div>
+    </div>
+    
+    <div class="movie-text" id="movie-grid">
+        <h1 style="font-size:50px">Films</h1>
+    </div>
+
+    <div class="movie-grid">
+        <div class="movie">
+            <img src="images/Film1.jpg" alt="Film 1">
+            <a href="oppenheimer.html">
+                <h3>Oppenheimer</h3>
+            </a>
+        </div>
+        <div class="movie">
+            <img src="images/Film2.jpg" alt="Film 2">
+            <a href="barbie.html">
+                <h3>Barbie</h3>
+            </a>
+        </div>
+        <div class="movie">
+            <img src="images/Film3.jpg" alt="Film 3">
+            <h3>FastX</h3>
+        </div>
+        <div class="movie">
+            <img src="images/Film4.jpg" alt="Film 4">
+            <h3>The Flash</h3>
+        </div>
+        <div class="movie">
+            <img src="images/Film5.jpg" alt="Film 5">
+            <h3>Morbius</h3>
+        </div>
+        <div class="movie">
+            <img src="images/Film6.jpg" alt="Film 6">
+            <h3>Retribution</h3>
+        </div>
+        <div class="movie">
+            <img src="images/Film7.jpg" alt="Film 7">
+            <h3>Assassin</h3>
+        </div>
+        <div class="movie">
+            <img src="images/Film8.jpg" alt="Film 8">
+            <h3>John Wick</h3>
+        </div>
+        <div class="movie">
+            <img src="Images/Film9.jpg" alt="Film 9">
+            <h3>Your Name</h3>
+        </div>
+    </div>
+    <!--Footer-->
+    <div class="contact-footer">
+        <footer>
+            <p>Auteur: <a href="about.html">Miquel Mostert</a></p>
+        </footer>
+    </div>
+</body>
+</html>
